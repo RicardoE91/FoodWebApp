@@ -1,0 +1,16 @@
+2020-02-07 12:17:59,968 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-02-07 13:03:40,779 [Worker-24: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sofftek.java.sboot:Food-Web-App:0.0.1-SNAPSHOT @ C:\Users\curso\Documents\Proyecto Final\BackEnd\Food-Web-App\pom.xml.
+2020-02-07 13:03:45,964 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food-Web-App/src/main/java
+2020-02-07 13:03:45,965 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food-Web-App/src/main/resources
+2020-02-07 13:03:45,979 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food-Web-App/src/main/resources
+2020-02-07 13:03:46,001 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food-Web-App/src/test/java
+2020-02-07 13:03:49,740 [Worker-24: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 14 sec
+2020-02-07 13:03:49,742 [Worker-24: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-02-07 13:03:50,554 [Worker-24: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sofftek.java.sboot:Food-Web-App:0.0.1-SNAPSHOT @ C:\Users\curso\Documents\Proyecto Final\BackEnd\Food-Web-App\pom.xml.
+2020-02-07 13:03:51,600 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food-Web-App/src/main/java
+2020-02-07 13:03:51,601 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food-Web-App/src/main/resources
+2020-02-07 13:03:51,603 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food-Web-App/src/main/resources
+2020-02-07 13:03:51,609 [Worker-24: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food-Web-App/src/test/java
+2020-02-07 13:03:52,156 [Worker-24: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2020-02-07 13:03:53,577 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-07 13:03:53,583 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
