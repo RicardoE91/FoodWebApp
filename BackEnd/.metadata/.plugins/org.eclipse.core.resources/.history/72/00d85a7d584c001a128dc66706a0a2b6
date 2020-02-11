@@ -1,0 +1,16 @@
+package com.sofftek.java.sboot.service;
+
+import java.util.List;
+
+import com.sofftek.java.sboot.entity.Receta;
+
+public interface RecetaService {
+	public List<Receta> findAllRecetas();
+	public Receta findRecetaById(Integer id);
+	public Receta saveReceta(Receta receta);
+	public void deleteReceta(Integer id);
+	public Receta updateReceta(Receta receta);
+	public Receta patchReceta(Integer id, Receta requestBody);
+	public Receta findRecetaByNombre(String nombre);
+
+}

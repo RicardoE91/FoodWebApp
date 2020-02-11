@@ -1,0 +1,5 @@
+package com.sofftek.java.sboot.repository;
+
+public interface MeGustaRepository {
+
+}
