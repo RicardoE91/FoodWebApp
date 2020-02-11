@@ -1,0 +1,34 @@
+package com.sofftek.java.sboot.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="horario_comida")
+public class HorarioComida {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer horario_comida_id;
+	private String descripcion;
+	
+	public Integer getHorario_comida_id() {
+		return horario_comida_id;
+	}
+	public void setHorario_comida_id(Integer horario_comida_id) {
+		this.horario_comida_id = horario_comida_id;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	@Override
+	public String toString() {
+		return "HorarioComida [horario_comida_id=" + horario_comida_id + ", descripcion=" + descripcion + "]";
+	}
+}

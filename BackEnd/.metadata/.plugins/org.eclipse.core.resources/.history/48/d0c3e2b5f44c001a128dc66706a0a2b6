@@ -1,0 +1,13 @@
+package com.sofftek.java.sboot.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.sofftek.java.sboot.entity.Receta;
+
+public interface RecetaRepository extends JpaRepository<Receta, Integer>{
+	public List<Receta> findRecetaByHorarioComidaIdAndTiempoComidaId(Integer horario_comida_id, Integer tiempo_comida_id);
+	
+	public List<Receta> findRecetaByHorario_Comida_Id_AndTiempo_Comida_Id(Integer horario_comida_id, Integer tiempo_comida_id);
+}

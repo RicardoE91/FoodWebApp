@@ -1,5 +1,6 @@
 package com.sofftek.java.sboot.entity;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
@@ -12,7 +13,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="receta")
-public class Receta {
+public class Receta implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer receta_id;
@@ -25,10 +31,10 @@ public class Receta {
 	
 	@ManyToOne()
 	@JoinColumn(name="horario_comida_id")
-	private HorarioComida horario_comida_id;
+	private HorarioComida horarioComida;
 	@ManyToOne()
 	@JoinColumn(name="tiempo_comida_id")
-	private TiempoComida tiempo_comida_id;
+	private TiempoComida tiempoComida;
 	@ManyToOne()
 	@JoinColumn(name="proteina_id")
 	private Proteina proteina_id;
@@ -90,17 +96,17 @@ public class Receta {
 	public void setFecha_modificacion(Timestamp fecha_modificacion) {
 		this.fecha_modificacion = fecha_modificacion;
 	}
-	public HorarioComida getHorario_comida_id() {
-		return horario_comida_id;
+	public HorarioComida getHorarioComida() {
+		return horarioComida;
 	}
-	public void setHorario_comida_id(HorarioComida horario_comida_id) {
-		this.horario_comida_id = horario_comida_id;
+	public void setHorarioComida(HorarioComida horarioComida) {
+		this.horarioComida = horarioComida;
 	}
-	public TiempoComida getTiempo_comida_id() {
-		return tiempo_comida_id;
+	public TiempoComida getTiempoComida() {
+		return tiempoComida;
 	}
-	public void setTiempo_comida_id(TiempoComida tiempo_comida_id) {
-		this.tiempo_comida_id = tiempo_comida_id;
+	public void setTiempoComida(TiempoComida tiempoComida) {
+		this.tiempoComida = tiempoComida;
 	}
 	public Proteina getProteina_id() {
 		return proteina_id;
@@ -143,8 +149,8 @@ public class Receta {
 	public String toString() {
 		return "Receta [receta_id=" + receta_id + ", nombre=" + nombre + ", imagen=" + imagen + ", video=" + video
 				+ ", ingredientes=" + ingredientes + ", fecha_creacion=" + fecha_creacion + ", fecha_modificacion="
-				+ fecha_modificacion + ", horario_comida_id=" + horario_comida_id + ", tiempo_comida_id="
-				+ tiempo_comida_id + ", proteina_id=" + proteina_id + ", tiempo_preparacion_id=" + tiempo_preparacion_id
+				+ fecha_modificacion + ", horarioComida=" + horarioComida + ", tiempoComida=" + tiempoComida
+				+ ", proteina_id=" + proteina_id + ", tiempo_preparacion_id=" + tiempo_preparacion_id
 				+ ", tipo_coccion_id=" + tipo_coccion_id + ", porciones_id=" + porciones_id + ", tipo_cocina_id="
 				+ tipo_cocina_id + ", usuario_id=" + usuario_id + "]";
 	}

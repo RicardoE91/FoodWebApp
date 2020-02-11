@@ -1,5 +1,7 @@
 package com.sofftek.java.sboot.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,7 +10,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="horario_comida")
-public class HorarioComida {
+public class HorarioComida implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer horario_comida_id;
