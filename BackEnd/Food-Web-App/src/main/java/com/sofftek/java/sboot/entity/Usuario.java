@@ -24,7 +24,7 @@ public class Usuario {
 	
 	@ManyToOne()
 	@JoinColumn(name="rol_id")
-	private Rol rol_id;
+	private Rol rol;
 
 	public Integer getUsuario_id() {
 		return usuario_id;
@@ -90,18 +90,18 @@ public class Usuario {
 		this.password = password;
 	}
 
-	public Rol getRol_id() {
-		return rol_id;
+	public Rol getRol() {
+		return rol;
 	}
 
-	public void setRol_id(Rol rol_id) {
-		this.rol_id = rol_id;
+	public void setRol(Rol rol) {
+		this.rol = rol;
 	}
 
 	@Override
 	public String toString() {
 		return "Usuario [usuario_id=" + usuario_id + ", nombre_usuario=" + nombre_usuario + ", nombre=" + nombre
 				+ ", apellido=" + apellido + ", estatus=" + estatus + ", biografia=" + biografia + ", correo=" + correo
-				+ ", password=" + password + ", rol_id=" + rol_id + "]";
+				+ ", password=" + password + ", rol=" + rol + "]";
 	}
 }

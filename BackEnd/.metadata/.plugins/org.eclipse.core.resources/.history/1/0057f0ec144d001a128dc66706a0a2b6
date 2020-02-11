@@ -1,0 +1,70 @@
+package com.sofftek.java.sboot.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pasos_preparacion")
+public class PasosPreparacion {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer pasos_preparacion_id;
+	private Integer numero_paso;
+	private String imagen;
+	private String descripcion;
+	
+	@ManyToOne()
+	@JoinColumn(name="receta_id")
+	private Receta receta_id;
+
+	public Integer getPasos_preparacion_id() {
+		return pasos_preparacion_id;
+	}
+
+	public void setPasos_preparacion_id(Integer pasos_preparacion_id) {
+		this.pasos_preparacion_id = pasos_preparacion_id;
+	}
+
+	public Integer getNumero_paso() {
+		return numero_paso;
+	}
+
+	public void setNumero_paso(Integer numero_paso) {
+		this.numero_paso = numero_paso;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Receta getReceta_id() {
+		return receta_id;
+	}
+
+	public void setReceta_id(Receta receta_id) {
+		this.receta_id = receta_id;
+	}
+
+	@Override
+	public String toString() {
+		return "PasosPreparacion [pasos_preparacion_id=" + pasos_preparacion_id + ", numero_paso=" + numero_paso
+				+ ", imagen=" + imagen + ", descripcion=" + descripcion + ", receta_id=" + receta_id + "]";
+	}
+}

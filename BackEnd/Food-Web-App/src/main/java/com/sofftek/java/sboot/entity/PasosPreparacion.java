@@ -20,7 +20,7 @@ public class PasosPreparacion {
 	
 	@ManyToOne()
 	@JoinColumn(name="receta_id")
-	private Receta receta_id;
+	private Receta receta;
 
 	public Integer getPasos_preparacion_id() {
 		return pasos_preparacion_id;
@@ -54,17 +54,17 @@ public class PasosPreparacion {
 		this.descripcion = descripcion;
 	}
 
-	public Receta getReceta_id() {
-		return receta_id;
+	public Receta getReceta() {
+		return receta;
 	}
 
-	public void setReceta_id(Receta receta_id) {
-		this.receta_id = receta_id;
+	public void setReceta(Receta receta) {
+		this.receta = receta;
 	}
 
 	@Override
 	public String toString() {
 		return "PasosPreparacion [pasos_preparacion_id=" + pasos_preparacion_id + ", numero_paso=" + numero_paso
-				+ ", imagen=" + imagen + ", descripcion=" + descripcion + ", receta_id=" + receta_id + "]";
+				+ ", imagen=" + imagen + ", descripcion=" + descripcion + ", receta=" + receta + "]";
 	}
 }

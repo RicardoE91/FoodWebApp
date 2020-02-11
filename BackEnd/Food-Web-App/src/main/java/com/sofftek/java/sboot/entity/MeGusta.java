@@ -17,10 +17,10 @@ public class MeGusta {
 	
 	@ManyToOne()
 	@JoinColumn(name="receta_id")
-	private Receta receta_id;
+	private Receta receta;
 	@ManyToOne()
 	@JoinColumn(name="usuario_id")
-	private Usuario usuario_id;
+	private Usuario usuario;
 	
 	public Integer getMe_gusta_id() {
 		return me_gusta_id;
@@ -28,21 +28,21 @@ public class MeGusta {
 	public void setMe_gusta_id(Integer me_gusta_id) {
 		this.me_gusta_id = me_gusta_id;
 	}
-	public Receta getReceta_id() {
-		return receta_id;
+	public Receta getReceta() {
+		return receta;
 	}
-	public void setReceta_id(Receta receta_id) {
-		this.receta_id = receta_id;
+	public void setReceta(Receta receta) {
+		this.receta = receta;
 	}
-	public Usuario getUsuario_id() {
-		return usuario_id;
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setUsuario_id(Usuario usuario_id) {
-		this.usuario_id = usuario_id;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	@Override
 	public String toString() {
-		return "MeGusta [me_gusta_id=" + me_gusta_id + ", receta_id=" + receta_id + ", usuario_id=" + usuario_id + "]";
-	}
+		return "MeGusta [me_gusta_id=" + me_gusta_id + ", receta=" + receta + ", usuario=" + usuario + "]";
+	}	
 }

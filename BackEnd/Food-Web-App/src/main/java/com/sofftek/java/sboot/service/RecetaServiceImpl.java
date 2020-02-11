@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sofftek.java.sboot.entity.HorarioComida;
+import com.sofftek.java.sboot.entity.Proteina;
 import com.sofftek.java.sboot.entity.Receta;
 import com.sofftek.java.sboot.entity.TiempoComida;
+import com.sofftek.java.sboot.entity.TiempoPreparacion;
+import com.sofftek.java.sboot.entity.TipoCoccion;
 import com.sofftek.java.sboot.repository.RecetaRepository;
 
 @Service
@@ -19,7 +22,7 @@ public class RecetaServiceImpl implements RecetaService {
 	@Override
 	@Transactional(readOnly = true)
 	public List<Receta> findAllRecetas() {
-		return (List<Receta>) recetaRepository.findAll();
+		return recetaRepository.findAll();
 	}
 
 	@Override
@@ -35,9 +38,8 @@ public class RecetaServiceImpl implements RecetaService {
 	}
 
 	@Override
-	public void deleteReceta(Integer receta_id) {
-		// TODO Auto-generated method stub
-		
+	public void deleteRecetaById(Integer receta_id){
+		recetaRepository.deleteById(receta_id);		
 	}
 
 	@Override
@@ -53,14 +55,38 @@ public class RecetaServiceImpl implements RecetaService {
 	}
 
 	@Override
-	public Receta findRecetaByNombre(String nombre) {
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComida(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id) {
+		return recetaRepository.findRecetaByHorarioComidaAndTiempoComida(horario_comida_id, tiempo_comida_id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndProteina(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, Proteina proteina_id) {
+		return recetaRepository.findRecetaByHorarioComidaAndTiempoComidaAndProteina(horario_comida_id, tiempo_comida_id, proteina_id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTipoCoccion(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, TipoCoccion tipo_coccion_id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Receta> findRecetaByHorarioComidaAndTiempoComida(HorarioComida horario_comida_id,
-			TiempoComida tiempo_comida_id) {
-		return recetaRepository.findRecetaByHorarioComidaAndTiempoComida(horario_comida_id, tiempo_comida_id);
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTiempoPreparacion(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, TiempoPreparacion tiempo_preparacion_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByNombreContaining(String nombre) {
+		return recetaRepository.findRecetaByNombreContaining(nombre);
 	}
 }

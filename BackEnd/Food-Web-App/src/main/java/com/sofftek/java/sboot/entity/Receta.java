@@ -1,6 +1,5 @@
 package com.sofftek.java.sboot.entity;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
@@ -13,12 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="receta")
-public class Receta implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
+public class Receta{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer receta_id;
@@ -37,22 +31,22 @@ public class Receta implements Serializable{
 	private TiempoComida tiempoComida;
 	@ManyToOne()
 	@JoinColumn(name="proteina_id")
-	private Proteina proteina_id;
+	private Proteina proteina;
 	@ManyToOne()
 	@JoinColumn(name="tiempo_preparacion_id")
-	private TiempoPreparacion tiempo_preparacion_id;
+	private TiempoPreparacion tiempoPreparacion;
 	@ManyToOne()
 	@JoinColumn(name="tipo_coccion_id")
-	private TipoCoccion tipo_coccion_id;
+	private TipoCoccion tipoCoccion;
 	@ManyToOne()
 	@JoinColumn(name="porciones_id")
-	private Porciones porciones_id;
+	private Porciones porciones;
 	@ManyToOne()
 	@JoinColumn(name="tipo_cocina_id")
-	private TipoCocina tipo_cocina_id;
+	private TipoCocina tipoCocina;
 	@ManyToOne()
 	@JoinColumn(name="usuario_id")
-	private Usuario usuario_id;
+	private Usuario usuario;
 	
 	public Integer getReceta_id() {
 		return receta_id;
@@ -108,41 +102,41 @@ public class Receta implements Serializable{
 	public void setTiempoComida(TiempoComida tiempoComida) {
 		this.tiempoComida = tiempoComida;
 	}
-	public Proteina getProteina_id() {
-		return proteina_id;
+	public Proteina getProteina() {
+		return proteina;
 	}
-	public void setProteina_id(Proteina proteina_id) {
-		this.proteina_id = proteina_id;
+	public void setProteina(Proteina proteina) {
+		this.proteina = proteina;
 	}
-	public TiempoPreparacion getTiempo_preparacion_id() {
-		return tiempo_preparacion_id;
+	public TiempoPreparacion getTiempoPreparacion() {
+		return tiempoPreparacion;
 	}
-	public void setTiempo_preparacion_id(TiempoPreparacion tiempo_preparacion_id) {
-		this.tiempo_preparacion_id = tiempo_preparacion_id;
+	public void setTiempoPreparacion(TiempoPreparacion tiempoPreparacion) {
+		this.tiempoPreparacion = tiempoPreparacion;
 	}
-	public TipoCoccion getTipo_coccion_id() {
-		return tipo_coccion_id;
+	public TipoCoccion getTipoCoccion() {
+		return tipoCoccion;
 	}
-	public void setTipo_coccion_id(TipoCoccion tipo_coccion_id) {
-		this.tipo_coccion_id = tipo_coccion_id;
+	public void setTipoCoccion(TipoCoccion tipoCoccion) {
+		this.tipoCoccion = tipoCoccion;
 	}
-	public Porciones getPorciones_id() {
-		return porciones_id;
+	public Porciones getPorciones() {
+		return porciones;
 	}
-	public void setPorciones_id(Porciones porciones_id) {
-		this.porciones_id = porciones_id;
+	public void setPorciones(Porciones porciones) {
+		this.porciones = porciones;
 	}
-	public TipoCocina getTipo_cocina_id() {
-		return tipo_cocina_id;
+	public TipoCocina getTipoCocina() {
+		return tipoCocina;
 	}
-	public void setTipo_cocina_id(TipoCocina tipo_cocina_id) {
-		this.tipo_cocina_id = tipo_cocina_id;
+	public void setTipoCocina(TipoCocina tipoCocina) {
+		this.tipoCocina = tipoCocina;
 	}
-	public Usuario getUsuario_id() {
-		return usuario_id;
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setUsuario_id(Usuario usuario_id) {
-		this.usuario_id = usuario_id;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	@Override
@@ -150,8 +144,7 @@ public class Receta implements Serializable{
 		return "Receta [receta_id=" + receta_id + ", nombre=" + nombre + ", imagen=" + imagen + ", video=" + video
 				+ ", ingredientes=" + ingredientes + ", fecha_creacion=" + fecha_creacion + ", fecha_modificacion="
 				+ fecha_modificacion + ", horarioComida=" + horarioComida + ", tiempoComida=" + tiempoComida
-				+ ", proteina_id=" + proteina_id + ", tiempo_preparacion_id=" + tiempo_preparacion_id
-				+ ", tipo_coccion_id=" + tipo_coccion_id + ", porciones_id=" + porciones_id + ", tipo_cocina_id="
-				+ tipo_cocina_id + ", usuario_id=" + usuario_id + "]";
+				+ ", proteina=" + proteina + ", tiempoPreparacion=" + tiempoPreparacion + ", tipoCoccion=" + tipoCoccion
+				+ ", porciones=" + porciones + ", tipoCocina=" + tipoCocina + ", usuario=" + usuario + "]";
 	}
 }

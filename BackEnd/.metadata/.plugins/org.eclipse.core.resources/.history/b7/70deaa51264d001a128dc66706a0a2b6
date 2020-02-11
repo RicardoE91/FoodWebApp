@@ -1,0 +1,92 @@
+package com.sofftek.java.sboot.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sofftek.java.sboot.entity.HorarioComida;
+import com.sofftek.java.sboot.entity.Proteina;
+import com.sofftek.java.sboot.entity.Receta;
+import com.sofftek.java.sboot.entity.TiempoComida;
+import com.sofftek.java.sboot.entity.TiempoPreparacion;
+import com.sofftek.java.sboot.entity.TipoCoccion;
+import com.sofftek.java.sboot.repository.RecetaRepository;
+
+@Service
+public class RecetaServiceImpl implements RecetaService {
+	@Autowired
+	private RecetaRepository recetaRepository;
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findAllRecetas() {
+		return recetaRepository.findAll();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Receta findRecetaById(Integer receta_id) {
+		return recetaRepository.findById(receta_id).orElse(null);
+	}
+
+	@Override
+	public Receta saveReceta(Receta receta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteReceta(Integer receta_id) {
+		recetaRepository.deleteById(receta_id);		
+	}
+
+	@Override
+	public Receta updateReceta(Receta receta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Receta patchReceta(Integer receta_id, Receta requestBody) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComida(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id) {
+		return recetaRepository.findRecetaByHorarioComidaAndTiempoComida(horario_comida_id, tiempo_comida_id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndProteina(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, Proteina proteina_id) {
+		return recetaRepository.findRecetaByHorarioComidaAndTiempoComidaAndProteina(horario_comida_id, tiempo_comida_id, proteina_id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTipoCoccion(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, TipoCoccion tipo_coccion_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTiempoPreparacion(HorarioComida horario_comida_id,
+			TiempoComida tiempo_comida_id, TiempoPreparacion tiempo_preparacion_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Receta> findRecetaByNombreContaining(String nombre) {
+		return recetaRepository.findRecetaByNombreContaining(nombre);
+	}
+}

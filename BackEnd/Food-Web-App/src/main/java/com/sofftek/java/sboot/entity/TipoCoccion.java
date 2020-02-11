@@ -13,6 +13,7 @@ public class TipoCoccion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer tipo_coccion_id;
 	private String descripcion;
+	
 	public Integer getTipo_coccion_id() {
 		return tipo_coccion_id;
 	}

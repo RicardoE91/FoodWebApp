@@ -1,0 +1,76 @@
+package com.sofftek.java.sboot.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sofftek.java.sboot.entity.HorarioComida;
+import com.sofftek.java.sboot.entity.Proteina;
+import com.sofftek.java.sboot.entity.Receta;
+import com.sofftek.java.sboot.entity.TiempoComida;
+import com.sofftek.java.sboot.service.RecetaService;
+
+@RestController
+@RequestMapping("/RobustRounce")
+public class RecetaController {
+	@Autowired
+	public RecetaService recetaService;
+	
+	@GetMapping("/Recetas")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Receta> findAllRecetas(){
+		return recetaService.findAllRecetas();
+	}
+	
+	@GetMapping("/Recetas/FindbyId/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public Receta findRecetaById(@PathVariable("id") Integer receta_id){
+		return recetaService.findRecetaById(receta_id);
+	}
+	
+	@DeleteMapping("/Recetas/DeletebyId/{id}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void deleteReceta(@PathVariable("id") Integer receta_id) {
+		recetaService.deleteRecetaById(receta_id);
+	}
+	
+	@GetMapping("/Recetas/FindbyNombre/{nombre}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Receta> findRecetaByNombreContaining(@PathVariable("nombre") String nombre){
+		return recetaService.findRecetaByNombreContaining(nombre);
+	}
+	
+	@GetMapping("/Recetas/{horario_comida_id}/{tiempo_comida_id}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComida(@PathVariable("horario_comida_id") Integer horario_comida_id, @PathVariable("tiempo_comida_id") Integer tiempo_comida_id){
+		HorarioComida horarioComida = new HorarioComida();
+		horarioComida.setHorario_comida_id(horario_comida_id);
+		
+		TiempoComida tiempoComida = new TiempoComida ();
+		tiempoComida.setTiempo_comida_id(tiempo_comida_id); 
+		
+		return recetaService.findRecetaByHorarioComidaAndTiempoComida(horarioComida, tiempoComida);
+	}
+	
+	@GetMapping("/Recetas/{horario_comida_id}/{tiempo_comida_id}/{proteina_id}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndProteina(@PathVariable("horario_comida_id") Integer horario_comida_id, @PathVariable("tiempo_comida_id") Integer tiempo_comida_id, @PathVariable("proteina_id") Integer proteina_id){
+		HorarioComida horarioComida = new HorarioComida();
+		horarioComida.setHorario_comida_id(horario_comida_id);
+		
+		TiempoComida tiempoComida = new TiempoComida();
+		tiempoComida.setTiempo_comida_id(tiempo_comida_id); 
+		
+		Proteina proteina = new Proteina();
+		proteina.setProteina_id(proteina_id);
+		
+		return recetaService.findRecetaByHorarioComidaAndTiempoComidaAndProteina(horarioComida, tiempoComida, proteina);
+	}
+}

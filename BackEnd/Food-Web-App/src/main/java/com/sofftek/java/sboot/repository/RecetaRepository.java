@@ -5,9 +5,16 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.sofftek.java.sboot.entity.HorarioComida;
+import com.sofftek.java.sboot.entity.Proteina;
 import com.sofftek.java.sboot.entity.Receta;
 import com.sofftek.java.sboot.entity.TiempoComida;
+import com.sofftek.java.sboot.entity.TiempoPreparacion;
+import com.sofftek.java.sboot.entity.TipoCoccion;
 
 public interface RecetaRepository extends JpaRepository<Receta, Integer>{
 	public List<Receta> findRecetaByHorarioComidaAndTiempoComida(HorarioComida horario_comida_id, TiempoComida tiempo_comida_id);
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndProteina(HorarioComida horario_comida_id, TiempoComida tiempo_comida_id, Proteina proteina_id);
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTipoCoccion(HorarioComida horario_comida_id, TiempoComida tiempo_comida_id, TipoCoccion tipo_coccion_id);
+	public List<Receta> findRecetaByHorarioComidaAndTiempoComidaAndTiempoPreparacion(HorarioComida horario_comida_id, TiempoComida tiempo_comida_id, TiempoPreparacion tiempo_preparacion_id);
+	public List<Receta> findRecetaByNombreContaining(String nombre);
 }
