@@ -52,24 +52,8 @@ public class RecetaServiceImpl implements RecetaService {
 	@Override
 	@Transactional
 	public Receta patchReceta(Integer receta_id, Receta requestBody) {
-		Receta receta = findRecetaById(receta_id);
-		receta.setReceta_id(receta_id);
-		receta.setNombre(requestBody.getNombre() != null ? requestBody.getNombre() : receta.getNombre());
-		receta.setImagen(requestBody.getImagen() != null ? requestBody.getImagen() : receta.getImagen());
-		receta.setVideo(requestBody.getVideo() != null ? requestBody.getVideo() : receta.getVideo());
-		receta.setIngredientes(requestBody.getIngredientes() != null ? requestBody.getIngredientes() : receta.getIngredientes());
-		receta.setHorarioComida(requestBody.getHorarioComida() != null ? requestBody.getHorarioComida() : receta.getHorarioComida());
-		receta.setTiempoComida(requestBody.getTiempoComida() != null ? requestBody.getTiempoComida() : receta.getTiempoComida());
-		receta.setProteina(requestBody.getProteina() != null ? requestBody.getProteina() : receta.getProteina());
-		receta.setTiempoPreparacion(requestBody.getTiempoPreparacion() != null ? requestBody.getTiempoPreparacion() : receta.getTiempoPreparacion());
-		receta.setTipoCoccion(requestBody.getTipoCoccion() != null ? requestBody.getTipoCoccion() : receta.getTipoCoccion());
-		receta.setPorciones(requestBody.getPorciones() != null ? requestBody.getPorciones() : receta.getPorciones());
-		receta.setTipoCocina(requestBody.getTipoCocina() != null ? requestBody.getTipoCocina() : receta.getTipoCocina());
-		receta.setUsuario(requestBody.getUsuario() != null ? requestBody.getUsuario() : receta.getUsuario());
-		receta.setFecha_creacion(requestBody.getFecha_creacion() != null ? requestBody.getFecha_creacion() : receta.getFecha_creacion());
-		receta.setFecha_modificacion(requestBody.getFecha_modificacion() != null ? requestBody.getFecha_modificacion() : receta.getFecha_modificacion());
-		receta.setPasos(requestBody.getPasos() != null ? requestBody.getPasos() : receta.getPasos());
-		return recetaRepository.save(receta);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
