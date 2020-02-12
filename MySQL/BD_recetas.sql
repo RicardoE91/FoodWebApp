@@ -463,9 +463,48 @@ Cebollino.',
   '2',
   '1');
 INSERT INTO receta (nombre, imagen, ingredientes, horario_comida_id, tiempo_comida_id, proteina_id, tiempo_preparacion_id, tipo_coccion_id, porciones_id, tipo_cocina_id, usuario_id)
-VALUES ();
+VALUES ('Volovan',
+  'volovan.jpg',
+  '1 lámina de hojaldre.
+1 yema de huevo.
+sal y pimienta (opcional).',
+  '2',
+  '1',
+  '1',
+  '3',
+  '1',
+  '2',
+  '3',
+  '1');
 INSERT INTO receta (nombre, imagen, ingredientes, horario_comida_id, tiempo_comida_id, proteina_id, tiempo_preparacion_id, tipo_coccion_id, porciones_id, tipo_cocina_id, usuario_id)
-VALUES ();
+VALUES ('Brochetas de camarones empanizados',
+  'brochetascamarones.jpg',
+  '2 tazas de camarón grande sin cáscara y limpios.
+1/4 de taza de queso crema suavizado.
+1 cucharadita de sal.
+1/2 cucharadita de pimienta.
+1/2 taza de harina.
+2 huevos batido.
+1 paquete de Pan Molido.
+10 palos de brocheta.
+1 taza de aceite para freír.
+1 taza de tomate asado.
+1/4 de cebolla asada.
+1 diente de ajo asado.
+1 chile habanero asado.
+1 cucharada de cilantro fresco.
+1/4 de taza de jugo de limón.
+1 aguacate.
+1 cucharadita de sal.
+1/2 cucharadita de pimienta.',
+  '2',
+  '1',
+  '4',
+  '3',
+  '4',
+  '2',
+  '3',
+  '1');
 INSERT INTO receta (nombre, imagen, ingredientes, horario_comida_id, tiempo_comida_id, proteina_id, tiempo_preparacion_id, tipo_coccion_id, porciones_id, tipo_cocina_id, usuario_id)
 VALUES ();
 INSERT INTO receta (nombre, imagen, ingredientes, horario_comida_id, tiempo_comida_id, proteina_id, tiempo_preparacion_id, tipo_coccion_id, porciones_id, tipo_cocina_id, usuario_id)
