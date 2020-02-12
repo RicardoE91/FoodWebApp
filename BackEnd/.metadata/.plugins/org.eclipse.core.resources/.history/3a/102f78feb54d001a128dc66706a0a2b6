@@ -1,8 +1,6 @@
 package com.sofftek.java.sboot.entity;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -50,9 +47,6 @@ public class Receta{
 	@ManyToOne()
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
-	@OneToMany()
-	@JoinColumn(name="paso_id")
-	private List<PasosPreparacion> pasos = new ArrayList<>();
 	
 	public Integer getReceta_id() {
 		return receta_id;
@@ -144,12 +138,6 @@ public class Receta{
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	public List<PasosPreparacion> getPasos() {
-		return pasos;
-	}
-	public void setPasos(List<PasosPreparacion> pasos) {
-		this.pasos = pasos;
-	}
 	
 	@Override
 	public String toString() {
@@ -157,7 +145,6 @@ public class Receta{
 				+ ", ingredientes=" + ingredientes + ", fecha_creacion=" + fecha_creacion + ", fecha_modificacion="
 				+ fecha_modificacion + ", horarioComida=" + horarioComida + ", tiempoComida=" + tiempoComida
 				+ ", proteina=" + proteina + ", tiempoPreparacion=" + tiempoPreparacion + ", tipoCoccion=" + tipoCoccion
-				+ ", porciones=" + porciones + ", tipoCocina=" + tipoCocina + ", usuario=" + usuario + ", pasos="
-				+ pasos + "]";
+				+ ", porciones=" + porciones + ", tipoCocina=" + tipoCocina + ", usuario=" + usuario + "]";
 	}
 }

@@ -51,7 +51,6 @@ public class Receta{
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	@OneToMany()
-	@JoinColumn(name="paso_id")
 	private List<PasosPreparacion> pasos = new ArrayList<>();
 	
 	public Integer getReceta_id() {
