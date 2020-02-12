@@ -24,6 +24,7 @@ import com.sofftek.java.sboot.service.RecetaService;
 @RestController
 @RequestMapping("/RobustRounce")
 public class RecetaController {
+	private static final Timestamp Timestamp = null;
 	@Autowired
 	public RecetaService recetaService;
 	
@@ -81,6 +82,8 @@ public class RecetaController {
 	@PostMapping(value = "/Recetas/Save", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public Receta saveReceta(@RequestBody Receta requestBody) {
+		requestBody.setFecha_creacion(Timestamp);
+		requestBody.setFecha_modificacion(Timestamp);
 		return recetaService.saveReceta(requestBody);
 	}
 }

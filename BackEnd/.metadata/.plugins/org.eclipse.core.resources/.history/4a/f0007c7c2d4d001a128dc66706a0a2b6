@@ -32,26 +32,26 @@ public class RecetaServiceImpl implements RecetaService {
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly = true)
 	public Receta saveReceta(Receta receta) {
 		return recetaRepository.save(receta);
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly = true)
 	public void deleteRecetaById(Integer receta_id){
 		recetaRepository.deleteById(receta_id);		
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly = true)
 	public Receta updateReceta(Receta receta) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly = true)
 	public Receta patchReceta(Integer receta_id, Receta requestBody) {
 		// TODO Auto-generated method stub
 		return null;

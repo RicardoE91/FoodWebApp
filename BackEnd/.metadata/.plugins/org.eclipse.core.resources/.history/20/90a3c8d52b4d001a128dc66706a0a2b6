@@ -1,6 +1,5 @@
 package com.sofftek.java.sboot.controller;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,7 +77,7 @@ public class RecetaController {
 		return recetaService.findRecetaByHorarioComidaAndTiempoComidaAndProteina(horarioComida, tiempoComida, proteina);
 	}
 	
-	@PostMapping(value = "/Recetas/Save", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/Recetas/Guardar", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public Receta saveReceta(@RequestBody Receta requestBody) {
 		return recetaService.saveReceta(requestBody);
