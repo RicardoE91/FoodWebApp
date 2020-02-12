@@ -25,9 +25,9 @@ public class PasosPreparacion implements Serializable{
 	private String imagen;
 	private String descripcion;
 	
-	//@ManyToOne()
-	//@JoinColumn(name="receta_id")
-	//private Receta receta;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="receta_id")
+	private Receta receta_id;
 
 	public Integer getPasos_preparacion_id() {
 		return pasos_preparacion_id;
@@ -61,6 +61,14 @@ public class PasosPreparacion implements Serializable{
 		this.descripcion = descripcion;
 	}
 
+	public Receta getReceta_id() {
+		return receta_id;
+	}
+
+	public void setReceta_id(Receta receta_id) {
+		this.receta_id = receta_id;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -68,6 +76,6 @@ public class PasosPreparacion implements Serializable{
 	@Override
 	public String toString() {
 		return "PasosPreparacion [pasos_preparacion_id=" + pasos_preparacion_id + ", numero_paso=" + numero_paso
-				+ ", imagen=" + imagen + ", descripcion=" + descripcion + "]";
+				+ ", imagen=" + imagen + ", descripcion=" + descripcion + ", receta_id=" + receta_id + "]";
 	}
 }

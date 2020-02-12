@@ -57,7 +57,7 @@ public class Receta implements Serializable{
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name="receta_id")
+	//@JoinColumn(name="receta_id")
 	private List<PasosPreparacion> pasos = new ArrayList<>();
 	
 	public Integer getReceta_id() {

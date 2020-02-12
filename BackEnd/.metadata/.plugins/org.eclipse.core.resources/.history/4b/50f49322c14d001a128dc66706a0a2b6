@@ -25,9 +25,9 @@ public class PasosPreparacion implements Serializable{
 	private String imagen;
 	private String descripcion;
 	
-	//@ManyToOne()
+	//@ManyToOne(fetch = FetchType.LAZY)
 	//@JoinColumn(name="receta_id")
-	//private Receta receta;
+	//private Receta receta_id;
 
 	public Integer getPasos_preparacion_id() {
 		return pasos_preparacion_id;
