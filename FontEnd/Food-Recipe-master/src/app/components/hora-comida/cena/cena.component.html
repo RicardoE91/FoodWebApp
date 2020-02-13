@@ -1,0 +1,59 @@
+<div class="container">
+    <ol class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="#" routerLink="/inicio">Cena</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Tiempo</li>
+    </ol>
+    <div class="row mx-0">
+      <div class="col-lg-6 pt-0">
+        <h1>Selecciona tu tiempo de comida</h1>
+        <div class="row" data-aos="fade-down-right" data-aos-duration="1500">
+          <!-- direccion a receta random -->
+          <div class="col-sm-6 col-lg-4"><button type="button" class="btn" data-toggle="modal"
+              data-target="#exampleModal">
+              <img class="img-fluid" src="../../../assets/tiempos_comida/random.svg" width="80%" height="80%" alt="">
+              <h6 class="p-3">Random</h6>
+            </button></div>
+  
+          <!-- direccion a recetas de tiempo entrada -->
+          <div class="col-sm-6 col-lg-4"><button [routerLink]="['/cena/entrada']" routerLinkActive="router-link-active"  type="button" class="btn">
+              <img class="img-fluid svg-efec" src="../../../assets/tiempos_comida/soup.svg" width="80%" height="80%"
+                alt="">
+              <h6 class="p-3">Entrada</h6>
+            </button></div>
+  
+          <!-- direccion a recetas de tiempo plato fuerte -->
+          <div class="col-sm-6 col-lg-4"><button [routerLink]="['/cena/plato-fuerte']" routerLinkActive="router-link-active"  type="button" class="btn">
+              <img class="img-fluid" src="../../../assets/tiempos_comida/fork.svg" width="80%" height="80%" alt="">
+              <h6 class="p-3">Plato fuerte</h6>
+            </button></div>
+  
+          <div class="w-100"></div>
+  
+          <div class="col-lg-4 p-2"><button [routerLink]="['/cena/postre']" routerLinkActive="router-link-active"  type="button" class="btn">
+              <img class="img-fluid" src="../../../assets/tiempos_comida/pudding.svg" width="80%" height="80%" alt="">
+              <h6 class="p-3">Postre</h6>
+            </button></div>
+  
+          <div class="col-lg-4 p-2"><button [routerLink]="['/cena/snack']" routerLinkActive="router-link-active"  type="button" class="btn">
+              <img class="img-fluid" src="../../../assets/tiempos_comida/snack.svg" width="80%" height="80%" alt="">
+              <h6 class="p-3">Snack</h6>
+            </button></div>
+  
+        </div>
+      </div>
+      <div class="col-lg-6 pt-3 img-phone" data-aos="fade-up-left" data-aos-duration="1500">
+        <img width="100%" height="100%" src="../../../assets/opciones_tiempo.svg" alt="">
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <app-card-food></app-card-food>
+    </div>
+  </div>
+  

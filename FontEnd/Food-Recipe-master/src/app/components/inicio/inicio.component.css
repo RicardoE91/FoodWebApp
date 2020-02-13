@@ -1,0 +1,54 @@
+.main {
+  height: auto;
+  min-height: 90.7vh;
+  background-image: url('../../../assets/bg-home.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: 'Sriracha', cursive;
+}
+
+p {
+  font-family: 'Martel Sans', sans-serif;
+}
+
+.px-10 {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+
+.nombre {
+  font-family: sans-serif;
+}
+
+img {
+  -webkit-transition: all .9s ease;
+  /* Safari y Chrome */
+  -moz-transition: all .9s ease;
+  /* Firefox */
+  -o-transition: all .9s ease;
+  /* IE 9 */
+  -ms-transition: all .9s ease;
+  /* Opera */
+
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8I)
+}
+
+img:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.main{
+  overflow: hidden;
+}
+
+b{
+  color: #33cabb;
+}

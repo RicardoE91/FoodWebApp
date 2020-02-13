@@ -1,0 +1,33 @@
+ <main>
+   <div class="container w-75">
+     <div class="row mx-0 pt-3">
+       <div class="col-lg-8 text-center">
+         <h3>Encuentra la receta que necesitas</h3>
+       </div>
+       <div class="col-lg-4 text-center"><button [routerLink]="['/recetario/crear']" routerLinkActive="router-link-active"
+           type="button" class="btn btn-outline-danger">Crear receta</button></div>
+     </div>
+
+     <div class="row mx-o p-5">
+       <div *ngFor="let receta of recetas; let i = index" class="col-lg-4 mt-2 text-center">
+         <div class="card" style="width: 15rem;">
+           <img
+             src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+             class="card-img-top image-card" alt="...">
+           <div class="card-body text-center">
+             <h6 class="card-subtitle text-muted">{{receta.horarioComida.descripcion}}</h6>
+             <h6 class="card-title">{{receta.nombre}}</h6>
+             <button [routerLink]="['/receta', receta.receta_id]" type="button" class="btn btn-link">Ver mas ></button>
+             <hr>
+             <button type="button" class="btn btn-outline">
+               <fa-icon class="" [icon]="faShareAlt"></fa-icon>
+             </button><button type="button" class="btn btn-outline">
+               <fa-icon class="" [icon]="faHeart"></fa-icon>
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+   </div>
+ </main>

@@ -1,0 +1,14 @@
+main {
+    height: auto;
+    min-height: 89.7vh;
+    background-image: url('../../../assets/bg-recetas.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+.container{
+    height: auto;
+    width: 60%;
+    min-height: 89.7vh;
+    background-color: white !important;
+}

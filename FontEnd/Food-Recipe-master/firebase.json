@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "food",
+      "public": "dist/food",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

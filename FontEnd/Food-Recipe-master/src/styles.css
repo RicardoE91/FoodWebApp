@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+}
+
+.col-lg-4 img {
+    -webkit-transition: all .9s ease;
+    /* Safari y Chrome */
+    -moz-transition: all .9s ease;
+    /* Firefox */
+    -o-transition: all .9s ease;
+    /* IE 9 */
+    -ms-transition: all .9s ease;
+    /* Opera */
+  
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8I)
+  }
+  
+  .col-lg-4 img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+ 
