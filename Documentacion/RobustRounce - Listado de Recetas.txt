@@ -1,0 +1,111 @@
+1. DESAYUNO
+	2. ENTRADA
+		1. Sopa de lentejas **
+		2. Sopa de tortilla **
+		3. Sopa de verduras **
+		4. Sopa de poro y papa **
+		5. Consome de pollo **
+	3. PLATO FUERTE
+		6. Atun a las finas hierbas**
+		7. Camarones salteados**
+		8. Chuletas de cerdo con salsa de tamarindo**
+		9. Fajitas de carne**
+		10. Fetuccini mediterraneo**
+		11. Pancita**
+		12. Papas cataluña**
+		13. Pollo almendrado**
+		14. Pastel de carne con verduras**
+2. COMIDA
+	1. BOTANA
+		15. Ramen**
+		16. Volovan**
+		17. Brochetas de camarones empanizados**
+		18. Croquetas de arroz y queso**
+		19. Guacamole**
+		20. Boneless**
+		21. Queso panela en cubos**
+		22. Queso crema con galletas**
+		23. Alitas**
+
+		
+	2. ENTRADA
+		24. Arroz al vapor**
+		25. Caldo de camaron**
+		26. Crema de elote**
+		27. Caldo tlalpeño**
+		28. Crema de champiñones**
+		29. Crema de chile poblano**
+		30. Frijoles charros**
+		31. Fideo seco con chorizo**
+		32. Spaghetti aglio**
+	3. PLATO FUERTE
+		33. Tostadas de mariscos**
+		34. Barbacoa**
+		35. Chuletas de cerdo a la cerveza**
+		36. Fusilli con arrachera y esparragos**
+		37. Huachinango a la veracruzana**
+		38. Medallones de cerdo en salsa de mostaza**
+		39. Filete al albañil**
+		40. Mole de olla***falta crearla
+		41. Mole poblano**
+	4. POSTRE
+		42. Calabaza en tacha**
+		43. Galletas de platano**
+		44. Tarta de elote**
+		45. Brownie**
+		46. Bocaditos de fresa y nata**
+		47. Bollitos de manzana y canela**
+		48. Tartas de flores**
+		49. Estrellas**
+		50. Tarta sacher**
+3. CENA
+	1. BOTANA
+		51. Frijoles refritos con totopos**
+		52. Pure de papa campesino**
+		53. Mini pizza**
+		54. Aros de cebolla**
+		55. Mini Fugazzeta**
+		56. Dip de queso y nuez**
+		57. Corn dogs**
+		58. Salchipulpos**
+		59. Portobellos rellenos con tocino**
+	2. ENTRADA
+		60. Crema de jitomate rostizado**
+		61. Crema de cilantro**
+		62. Arroz rojo**
+		63. Arroz verde**
+		64. Arroz a la jardinera**
+		65. Envueltos de pollo con queso y huitlacoche**
+	3. PLATO FUERTE
+		66. Brochetas de res**
+		67. Cuete mechado**
+		68. Lomo relleno de frutas secas**
+		69. Espagueti con salsa de queso y mini albondigas**
+		70. Salmon en salsa de vino**
+		71. Lomo a la naranja**
+		72. Lomo de cerdo en salsa de ciruela pasa**
+		73. Paella valenciana**
+
+	4. POSTRE	
+		74. Arroz con leche**
+		75. Crepas de cajeta**
+		76. Tamal de chocolate con nuez**
+		77. Gelatina de mosaico**
+		78. Pastel de Zanahoria**
+		79. Pastel de chocolate**
+
+4. COLACION
+	1. BOTANA
+		80. Ensalada caprese**
+		81. Brocheta de fruta**
+		82. Palitos de pan con arugula prosciutto**
+		83. Dedos de queso**
+		84. Papas gajo**
+		85. Papas fritas**
+		86. Nuggets**
+		87. Rollitos de queso y tocino**
+		88. Jalapeño popper**
+	4. POSTRE
+		89. Pastel ingles de manzana**
+		90. Volteado de piña**
+		91. Barritas de almendra y cereza**

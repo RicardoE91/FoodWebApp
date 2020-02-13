@@ -1,0 +1,126 @@
+GET	http://localhost:8080/RobustRounce/Recetas ---> Despliega todas las recetas
+GET	http://localhost:8080/RobustRounce/Recetas/FindbyId/{id} ---> Busca por id de receta
+GET	http://localhost:8080/RobustRounce/Recetas/{horario_comida_id}/{tiempo_comida_id} ---> Busca por horario de comida y por tiempo de comida
+GET	http://localhost:8080/RobustRounce/Recetas/{horario_comida_id}/{tiempo_comida_id}/{proteina_id} ---> Busca por horario de comida, por tiempo de comida y por proteina
+GET	http://localhost:8080/RobustRounce/Recetas/FindbyNombre/{nombre} ---> Busca por nombre exacto de receta o coincidencia de lo insertado si se encuentra dentro de alguna parte del nombre
+DELETE	http://localhost:8080/RobustRounce/Recetas/DeletebyId/{id} ---> Borra por id de receta
+POST	http://localhost:8080/RobustRounce/Recetas/Save ---> Guarda receta en BD
+PUT	http://localhost:8080/RobustRounce/Recetas/UpdatebyId/{id} ---> Actualiza datos incluidos y borra los demas por id de receta
+PATCH 	http://localhost:8080/RobustRounce/Recetas/PatchbyId/{id} ---> Actualiza datos incluidos 
+
+Crear nuevo en PostMan:
+	Headers : 
+		KEY - Content-Type
+		Value - application/json
+	Pre-request Script :
+		var current_timestamp = new Date();
+		postman.setEnvironmentVariable("current_timestamp", current_timestamp.toISOString());
+	Body (raw) :
+{
+    "nombre": "#",
+    "imagen": "#.jpg",
+    "video": "#",
+    "ingredientes": "#.\n#.\n#.\n}",
+    "fecha_creacion": "{{current_timestamp}}",
+    "fecha_modificacion": "{{current_timestamp}}",
+    "horarioComida": {
+        "horario_comida_id": #
+    },
+    "tiempoComida": {
+        "tiempo_comida_id": #
+    },
+    "proteina": {
+        "proteina_id": #
+    },
+    "tiempoPreparacion": {
+        "tiempo_preparacion_id": #
+    },
+    "tipoCoccion": {
+        "tipo_coccion_id": #
+    },
+    "porciones": {
+        "porciones_id": #
+    },
+    "tipoCocina": {
+        "tipo_cocina_id": #
+    },
+    "usuario": {
+        "usuario_id": #
+    },
+    "pasos": [
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        },
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        },
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        }
+    ]
+}
+
+Update en PostMan:
+	Headers : 
+		KEY - Content-Type
+		Value - application/json
+	Pre-request Script :
+		var current_timestamp = new Date();
+		postman.setEnvironmentVariable("current_timestamp", current_timestamp.toISOString());
+	Body (raw) :
+{
+    "receta_id": #,
+    "nombre": "#",
+    "imagen": "#.jpg",
+    "video": "#",
+    "ingredientes": "#.\n#.\n#.\n}",
+    "fecha_creacion": "#",
+    "fecha_modificacion": "{{current_timestamp}}",
+    "horarioComida": {
+        "horario_comida_id": #
+    },
+    "tiempoComida": {
+        "tiempo_comida_id": #
+    },
+    "proteina": {
+        "proteina_id": #
+    },
+    "tiempoPreparacion": {
+        "tiempo_preparacion_id": #
+    },
+    "tipoCoccion": {
+        "tipo_coccion_id": #
+    },
+    "porciones": {
+        "porciones_id": #
+    },
+    "tipoCocina": {
+        "tipo_cocina_id": #
+    },
+    "usuario": {
+        "usuario_id": #
+    },
+    "pasos": [
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        },
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        },
+        {
+            "numero_paso": #,
+            "imagen": "#.jpg",
+            "descripcion": "#"
+        }
+    ]
+}
